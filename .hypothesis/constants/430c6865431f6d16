@@ -1,0 +1,4 @@
+# file: C:\Users\vatss\OneDrive\Desktop\Project\clinical-research-assistant\clinical-research-assistant\app\core\parser.py
+# hypothesis_version: 6.151.4
+
+[1000, 'abstract', 'conclusion', 'method', 'result']

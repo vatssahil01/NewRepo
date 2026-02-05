@@ -1,0 +1,4 @@
+# file: C:\Users\vatss\OneDrive\Desktop\Project\clinical-research-assistant\clinical-research-assistant\app\core\privacy.py
+# hypothesis_version: 6.151.4
+
+['\\b\\d{10}\\b', '\\b\\d{12}\\b', 'date of birth', 'patient name']
