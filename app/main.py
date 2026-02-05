@@ -101,3 +101,4 @@ async def process_batch(files: List[UploadFile] = File(...)):
 def health():
     return {"status": "ok"}
 
+
