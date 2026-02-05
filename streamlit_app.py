@@ -13,16 +13,16 @@ API_URL = f"{BACKEND_URL}/process"
 BATCH_API_URL = f"{BACKEND_URL}/process-batch"
 
 
-# def backend_alive():
-#     try:
-#         r = requests.get(f"{BACKEND_URL}/", timeout=20)
-#         return r.status_code == 200
-#     except Exception:
-#         return False
+def backend_alive():
+    try:
+        r = requests.get(f"{BACKEND_URL}/", timeout=20)
+        return r.status_code == 200
+    except Exception:
+        return False
 
 
 
-# backend_available = backend_alive()
+backend_available = backend_alive()
 
 # -------------------------
 # Streamlit UI setup
@@ -39,15 +39,15 @@ st.caption("AI-powered, privacy-first research summarization")
 # Backend status handling
 # -------------------------
 
-# if backend_available:
-#     st.success("✅ Backend API connected")
-# else:
-#     st.warning(
-#         "⚠️ Backend API is not running.\n\n"
-#         "The app is running in **Demo Mode** using sample outputs.\n\n"
-#         "To enable full functionality, start the backend locally using:\n"
-#         "`uvicorn app.main:app --reload`"
-#     )
+if backend_available:
+    st.success("✅ Backend API connected")
+else:
+    st.warning(
+        "⚠️ Backend API is not running.\n\n"
+        "The app is running in **Demo Mode** using sample outputs.\n\n"
+        "To enable full functionality, start the backend locally using:\n"
+        "`uvicorn app.main:app --reload`"
+    )
 
 # -------------------------
 # Single Document Processing
