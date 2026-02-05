@@ -15,7 +15,7 @@ BATCH_API_URL = f"{BACKEND_URL}/process-batch"
 
 def backend_alive():
     try:
-        r = requests.get(f"{BACKEND_URL}/docs", timeout=1)
+        r = requests.get(f"{BACKEND_URL}/", timeout=15)
         return r.status_code == 200
     except Exception:
         return False

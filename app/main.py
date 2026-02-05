@@ -97,9 +97,7 @@ async def process_batch(files: List[UploadFile] = File(...)):
 
 
 
-@app.get("/batch-status/{job_id}")
-def batch_status(job_id: str):
-    job = get_batch_job(job_id)
-    if not job:
-        raise HTTPException(status_code=404, detail="Job not found")
-    return job
+@app.get("/")
+def health():
+    return {"status": "ok"}
+
